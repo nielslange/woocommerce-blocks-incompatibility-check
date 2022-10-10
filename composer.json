@@ -1,0 +1,29 @@
+{
+  "name": "nielslange/woocommerce-blocks-incompatibility-check",
+  "type": "wordpress-plugin",
+  "license": "GPL-3.0-or-later",
+  "require": {
+    "php": ">=7.3"
+  },
+  "require-dev": {
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
+    "humanmade/psalm-plugin-wordpress": "^2.0",
+    "overtrue/phplint": "^3.0",
+    "phpcompatibility/phpcompatibility-wp": "^2.1",
+    "squizlabs/php_codesniffer": "^3.6",
+    "vimeo/psalm": "^4.7",
+    "wp-coding-standards/wpcs": "^2.3"
+  },
+  "scripts": {
+    "phpcbf": "phpcbf --standard=phpcs.xml .",
+    "phpcs": "phpcs --standard=phpcs.xml .",
+    "phplint": "phplint",
+    "psalm": "psalm --no-cache"
+  },
+  "config": {
+    "allow-plugins": {
+      "composer/package-versions-deprecated": true,
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  }
+}
