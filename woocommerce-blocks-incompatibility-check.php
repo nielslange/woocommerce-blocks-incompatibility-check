@@ -165,15 +165,7 @@ class WC_Blocks_Incompatibility_Check {
 	 * @return void
 	 */
 	public static function submenu_page_callback() {
-		$relevant_plugins        = self::get_relevant_extensions();
-		$all_payment_gateways    = self::get_all_payment_gateways();
-		$active_payment_gateways = self::get_active_payment_gateways();
-
-		foreach ( $all_payment_gateways as $key => $value ) {
-			print '<pre>';
-			print_r( $key );
-			print '</pre>';
-		}
+		$relevant_plugins = self::get_relevant_extensions();
 
 		?>
 		<div class="wrap">
